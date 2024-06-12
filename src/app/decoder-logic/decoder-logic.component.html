@@ -1,0 +1,24 @@
+<div class="container text-center">
+  <div class="row flex-column">
+    <div class="col">welcome to my roman numerals decoder</div>
+    <div class="col">
+      <input
+        type="text"
+        #romanNumeral
+        placeholder="Enter roman numeral"
+        name="romanNumeral"
+        pattern="[a-z]"
+      />
+      <button (click)="getValue(romanNumeral.value)">submit</button>
+    </div>
+    <div class="text-danger" *ngIf="notRomanNumeral">
+      please enter a valid roman numeral ie. I,M,N,C,D,X
+    </div>
+    <div class="col">
+      Your roman numeral is:
+      <div *ngIf="integer! > 0 || undefined">
+        {{ integer }}
+      </div>
+    </div>
+  </div>
+</div>
